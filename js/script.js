@@ -1,65 +1,49 @@
 <script>
-// Garante que o script só roda depois que o HTML estiver completamente carregado.
 document.addEventListener('DOMContentLoaded', function() {
 
-  // 1. Pega os elementos do HTML que vamos usar.
-  var modal = document.getElementById("myModal");
-  var img = document.getElementById("myImg");
-  var modalImg = document.getElementById("img01");
-  var captionText = document.getElementById("caption");
-  var span = document.getElementsByClassName("custom-close")[0];
+  // Pega TODOS os containers de imagem+modal na página
+  const modalWrappers = document.querySelectorAll('.image-modal-wrapper');
 
-  // 2. Lógica para ABRIR o modal ao clicar na imagem.
-  img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  }
+  // Itera sobre cada container para configurar seu próprio modal
+  modalWrappers.forEach(function(wrapper) {
+    const triggerImg = wrapper.querySelector('.modal-trigger-img');
+    const modal = wrapper.querySelector('.image-modal-popup');
+    const modalDisplayImg = modal.querySelector('.modal-display-img');
+    const modalCaptionText = modal.querySelector('.modal-caption-text');
+    const closeButton = modal.querySelector('.custom-close');
 
-  // 3. Lógica para FECHAR o modal com o botão "X".
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
+    // Lógica para ABRIR este modal específico
+    triggerImg.addEventListener('click', function() {
+      modal.style.display = "block";
+      modalDisplayImg.src = this.src; // Pega a URL da imagem clicada
+      modalCaptionText.innerHTML = this.alt; // Pega o alt da imagem clicada
+    });
 
-  // 4. NOVO: Lógica para FECHAR o modal ao pressionar a tecla 'Escape'.
-  document.addEventListener('keydown', function(event) {
-    // Verifica se a tecla pressionada é 'Escape' E se o modal está visível.
-    if (event.key === 'Escape' && modal.style.display === "block") {
+    // Lógica para FECHAR este modal específico com o botão "X"
+    closeButton.addEventListener('click', function() {
       modal.style.display = "none";
+    });
+
+    // Lógica para FECHAR este modal específico clicando no fundo
+    modal.addEventListener('click', function(event) {
+      if (event.target === modal) { // Verifica se o clique foi diretamente no fundo do modal
+        modal.style.display = "none";
+      }
+    });
+  });
+
+  // Lógica GLOBAL para FECHAR QUALQUER modal aberto com a tecla 'Escape'
+  // Este listener não precisa ser dentro do loop 'forEach'
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      // Procura por qualquer modal que esteja aberto e o fecha
+      document.querySelectorAll('.image-modal-popup').forEach(function(openModal) {
+        if (openModal.style.display === "block") {
+          openModal.style.display = "none";
+        }
+      });
     }
   });
 
-  // 5. NOVO: Lógica para FECHAR o modal ao clicar fora da imagem (no fundo).
-  window.onclick = function(event) {
-    // Verifica se o elemento clicado (event.target) é o próprio fundo do modal.
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-
 });
-</script>
-
-
-<script>
-// Pega os elementos do HTML que vamos manipular
-var modal = document.getElementById("myModal");
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-
-// Define o que acontece quando a imagem gatilho é clicada
-img.onclick = function(){
-  modal.style.display = "block";       // Mostra o modal
-  modalImg.src = this.src;             // Coloca a mesma imagem no modal
-  captionText.innerHTML = this.alt;    // Usa o texto 'alt' da imagem como legenda
-}
-
-// Pega o elemento <span> que tem a classe "close"
-var span = document.getElementsByClassName("custom-close")[0];
-
-// Define o que acontece quando o botão "X" é clicado
-span.onclick = function() {
-  modal.style.display = "none";        // Esconde o modal
-}
 </script>

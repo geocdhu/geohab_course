@@ -2,341 +2,337 @@
 VERSÃO 1.1 - Boost Union
 DATA: 25/04/2025 */
 .bg-primary {
-    background-color: black !important;
-  }
-  
-  .navbar.navbar-dark.bg-primary .nav-link.active {
-    border-bottom-color: red;
-  }
-  
-  
-  .navbar.navbar-dark.bg-dark .custom-switch .custom-control-input:checked ~ .custom-control-label::after, .navbar.navbar-dark.bg-primary .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
-    background-color: red;
-  }
-  
-  
-  .course-content-item a {
-    color: #e41a1f !important;
-  }
-  
-  .flexsections .course-section {
-    border-radius: 1rem;
-    border: 1px dotted gray;
-    padding: 5px 15px 5px 15px;
-  }
-  .course-card .card-img-top, .theme-card .card-img-top {
-  background-position: right top;
-  height: 11rem;
-  }
-  
-  .course-section .availabilityinfo {
-    border-radius: 5px;
-  }
-  
-  /*Extra - nao esta no prod*/
-  /*
-    Centraliza verticalmente o radio button com a sua label
-    em questões de múltipla escolha para um alinhamento perfeito.
-  */
-  .form-check-inline .form-check-input {
-      position: static;
-      margin-top: -9px;
-      margin-right: 0.3125rem
-  5px
-  ;
-      margin-left: 0;
-  }
-  
-  /* Border dos vídeos*/
-  .activity-item .activity-altcontent img {
-      border-radius: 0rem;
-  }
-  /* START - h5 destaque classe especial*/
-  .destaque-h5 {
-    text-align: justify;
-    font-family: 'sans-serif', axiforma;
-    background: #f5f4f4;
-    padding: 10px;
-    border-radius: 10px;
+  background-color: black !important;
+}
+
+.navbar.navbar-dark.bg-primary .nav-link.active {
+  border-bottom-color: red;
+}
+
+
+.navbar.navbar-dark.bg-dark .custom-switch .custom-control-input:checked ~ .custom-control-label::after, .navbar.navbar-dark.bg-primary .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: red;
+}
+
+
+.course-content-item a {
+  color: #e41a1f !important;
+}
+
+.flexsections .course-section {
+  border-radius: 1rem;
+  border: 1px dotted gray;
+  padding: 5px 15px 5px 15px;
+}
+.course-card .card-img-top, .theme-card .card-img-top {
+background-position: right top;
+height: 11rem;
+}
+
+.course-section .availabilityinfo {
+  border-radius: 5px;
+}
+
+/*Extra - nao esta no prod*/
+/*
+  Centraliza verticalmente o radio button com a sua label
+  em questões de múltipla escolha para um alinhamento perfeito.
+*/
+.form-check-inline .form-check-input {
+    position: static;
+    margin-top: -9px;
+    margin-right: 0.3125rem
+5px
+;
+    margin-left: 0;
+}
+
+/* Border dos vídeos*/
+.activity-item .activity-altcontent img {
+    border-radius: 0rem;
+}
+/* START - h5 destaque classe especial*/
+.destaque-h5 {
+  text-align: justify;
+  font-family: 'sans-serif', axiforma;
+  background: #f5f4f4;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 700 !important;
+
+  strong {
     font-weight: 700 !important;
-  
-    strong {
-      font-weight: 700 !important;
-    }
   }
-  /* END- h5 destaque classe especial*/
-  
-  /* START - Bagde-color (fundo colorido)*/
-  @mixin badge-color($bgcolor, $name) {
-    .badge-color-#{$name} {
-      display: inline-block;
-      background-color: #{$bgcolor};
-      color: white;
-      border: solid 0px #000;
-      border-radius: 3px;
-      padding: 0.25em 0.6em;
-      font-size: 0.705rem;
-      font-weight: 500;
-    }
-  }
-  @include badge-color(#e91a1a, red);
-  @include badge-color(#5d0067, purple);
-  @include badge-color(#000000, black);
-  @include badge-color(#f9a825, yellow);
-  @include badge-color(#b8c1ca, gray);
-  @include badge-color(#cc8f04, gold);
-  @include badge-color(currentColor, auto);
-  
-  /* END - Badges*/
-  
-  /* START - bagde circular numeros*/
-  @mixin badge-circular($color, $name) {
-    .badge-circular-#{$name} {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 24px;
-      height: 24px;
-      background-color: $color;
-      color: white;
-      border-radius: 50%;
-      font-weight: bold;
-      font-size: 14px;
-      margin-right: 6px;
-      vertical-align: middle;
-    }
-  }
-  
-  @include badge-circular(#e91a1a, red);
-  @include badge-circular(#1ae96b, green);
-  @include badge-circular(#321ae9, blue);
-  @include badge-circular(#f9a825, yellow);
-  
-  /* END - Bagde circular numeros*/
-  
-  /* START - Bagde de links*/
-  .badge-link {
+}
+/* END- h5 destaque classe especial*/
+
+/* START - Bagde-color (fundo colorido)*/
+@mixin badge-color($bgcolor, $name) {
+  .badge-color-#{$name} {
     display: inline-block;
-    background-color: #f9fafa;
-    color: #666;
-    border: 1px solid #7877771a;
-    border-style: solid;
-    border-radius: 10px;
-    border-width: thin;
+    background-color: #{$bgcolor};
+    color: white;
+    border: solid 0px #000;
+    border-radius: 3px;
     padding: 0.25em 0.6em;
-    font-size: 0.675rem;
-    font-weight: 700 !important;
-      vertical-align: middle;
-  
-    a {
-      color: inherit;
-    }
+    font-size: 0.705rem;
+    font-weight: 500;
   }
-  
-  // Modificadores de cor
-  .badge-text-blue   { color: #0092C8; }
-  .badge-text-lilac  { color: #B96AD9; }
-  .badge-text-gray   { color: #777879; }
-  .badge-text-red  { color: #ef0009; }
-  .badge-text-salmon { color: #d67c5c; }
-  .badge-text-purple{ color: #5d0067; }
-  .badge-text-gold{ color: #cc8f04; }
-  .badge-text-black{ color: #000000; }
-  
-  /*END*/
-  
-  /*Start - Mensagem alerta*/
-  .alert-custom {
-    position: relative;
-    padding-left: 3rem; // espaço para o ícone à esquerda
-  
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 1rem;
-      transform: translateY(-50%);
-      width: 24px;
-      height: 24px;
-      background-image: url('https://raw.githubusercontent.com/maviz991/icons/bef91ae7d3ee22011c81e51c09951305c71deaae/icons_pasta/info-sign.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      filter: invert(25%) sepia(63%) saturate(1152%) hue-rotate(344deg) brightness(94%) contrast(91%);
-    }
+}
+@include badge-color(#e91a1a, red);
+@include badge-color(#5d0067, purple);
+@include badge-color(#000000, black);
+@include badge-color(#f9a825, yellow);
+@include badge-color(#b8c1ca, gray);
+@include badge-color(#cc8f04, gold);
+@include badge-color(currentColor, auto);
+
+/* END - Badges*/
+
+/* START - bagde circular numeros*/
+@mixin badge-circular($color, $name) {
+  .badge-circular-#{$name} {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: $color;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 6px;
+    vertical-align: middle;
   }
-  /*END*/
-  
-  /* Start - Imagem decorativa*/
-  .img-decoration {
-    display: inline-block;
-    width: 400px;
-    margin: 1.5rem 2rem 2rem 2rem;
-    cursor: zoom-in;
-  
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-    }
-  
-  @media (max-width: 768px) {
-      float: none;
-      display: block;
-      margin: 1rem auto 2rem auto; // centraliza no mobile
-    }
+}
+
+@include badge-circular(#e91a1a, red);
+@include badge-circular(#1ae96b, green);
+@include badge-circular(#321ae9, blue);
+@include badge-circular(#f9a825, yellow);
+
+/* END - Bagde circular numeros*/
+
+/* START - Bagde de links*/
+.badge-link {
+  display: inline-block;
+  background-color: #f9fafa;
+  color: #666;
+  border: 1px solid #7877771a;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: thin;
+  padding: 0.25em 0.6em;
+  font-size: 0.675rem;
+  font-weight: 700 !important;
+    vertical-align: middle;
+
+  a {
+    color: inherit;
   }
-  
-  /*END*/
-  
-  /* START*/
-  
-  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-  .flip-card-container {
-    display: flex;
-    flex-wrap: wrap;              // permite que quebrem linha em telas pequenas
-    gap: 1.5rem;                  // espaço entre os cards
-    justify-content: center;     // centraliza os cards
-    margin: 2rem auto;           // espaço externo opcional
-  }
-  
-  .flip-card {
-    background-color: transparent;
-    width: 200px;
-    height: 300px;
-    perspective: 1500px;
-    flex: 0 0 auto;               // impede que ocupe 100% da largura
-  }
-  
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front,
-  .flip-card-back {
+}
+
+// Modificadores de cor
+.badge-text-blue   { color: #0092C8; }
+.badge-text-lilac  { color: #B96AD9; }
+.badge-text-gray   { color: #777879; }
+.badge-text-red  { color: #ef0009; }
+.badge-text-salmon { color: #d67c5c; }
+.badge-text-purple{ color: #5d0067; }
+.badge-text-gold{ color: #cc8f04; }
+.badge-text-black{ color: #000000; }
+
+/*END*/
+
+/*Start - Mensagem alerta*/
+.alert-custom {
+  position: relative;
+  padding-left: 3rem; // espaço para o ícone à esquerda
+
+  &::before {
+    content: '';
     position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-image: url('https://raw.githubusercontent.com/maviz991/icons/bef91ae7d3ee22011c81e51c09951305c71deaae/icons_pasta/info-sign.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(25%) sepia(63%) saturate(1152%) hue-rotate(344deg) brightness(94%) contrast(91%);
+  }
+}
+/*END*/
+
+/* Start - Imagem decorativa*/
+.img-decoration {
+  display: inline-block;
+  width: 400px;
+  margin: 1.5rem 2rem 2rem 2rem;
+  cursor: zoom-in;
+
+  img {
+    display: block;
     width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    padding: 1rem;
-    box-sizing: border-box;
+    height: auto;
+    border-radius: 4px;
   }
-  
-  .flip-card-front {
-    background-color: black;
-    color: white;
+
+@media (max-width: 768px) {
+    float: none;
+    display: block;
+    margin: 1rem auto 2rem auto; // centraliza no mobile
   }
-  
-  .flip-card-back {
-    background-color: #e41a1f;
-    color: white;
-    transform: rotateY(180deg);
-  }
-  
-  /*Modal*/
-  /* Style the Image Used to Trigger the Modal */
+}
+
+/*END*/
+
+/* START*/
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card-container {
+  display: flex;
+  flex-wrap: wrap;              // permite que quebrem linha em telas pequenas
+  gap: 1.5rem;                  // espaço entre os cards
+  justify-content: center;     // centraliza os cards
+  margin: 2rem auto;           // espaço externo opcional
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 300px;
+  perspective: 1500px;
+  flex: 0 0 auto;               // impede que ocupe 100% da largura
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.flip-card-front {
+  background-color: black;
+  color: white;
+}
+
+.flip-card-back {
+  background-color: #e41a1f;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/*Modal*/
+/* Style the Image Used to Trigger the Modal */
 /* Seu CSS Ajustado */
 
 /* Estilo para as imagens que disparam o modal */
 .modal-trigger-img { /* <<< MUDOU AQUI (era #myImg) */
-  border-radius: 5px;
-  cursor: zoom-in;
-  transition: 0.3s;
-  width: 100%;
-  max-width: 300px; /* Alterado de 200% para um valor mais realista */
-  height: auto; /* Garante que a proporção da imagem seja mantida */
-  display: block; /* Garante que ela ocupe sua própria linha */
-  margin: 15px auto; /* Centraliza a imagem na página */
+border-radius: 5px;
+cursor: zoom-in;
+transition: 0.3s;
+
 }
 
 .modal-trigger-img:hover { /* <<< MUDOU AQUI */
-  opacity: 0.7;
+opacity: 0.7;
 }
 
 /* O Modal (fundo) - Classe geral, sem ID */
 .image-modal-popup { /* <<< MUDOU AQUI (era .modal, mas vamos usar um nome mais específico) */
-  display: none; /* Escondido por padrão */
-  position: fixed; /* Fica fixo na tela */
-  z-index: 1000; /* IMPORTANTE: O fundo precisa de z-index */
-  padding-top: 100px; /* Espaçamento do topo */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto; /* Permite scroll se necessário */
-  background-color: rgba(0, 0, 0, 0.616); /* Fundo preto com transparência */
+display: none; /* Escondido por padrão */
+position: fixed; /* Fica fixo na tela */
+z-index: 1000; /* IMPORTANTE: O fundo precisa de z-index */
+padding-top: 100px; /* Espaçamento do topo */
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto; /* Permite scroll se necessário */
+background-color: rgba(0, 0, 0, 0.616); /* Fundo preto com transparência */
 }
 
 /* Conteúdo do Modal (a imagem grande dentro) */
 .modal-display-img { /* <<< MUDOU AQUI (era .modal-content e #img01) */
-  margin: auto;
-  display: block;
-  width: 100%;
-  max-width: 1000px; /* ajuste de tamanho da imagem*/
+margin: auto;
+display: block;
+width: 100%;
+max-width: 1000px; /* ajuste de tamanho da imagem*/
 }
 
 /* Legenda do Modal */
 .modal-caption-text { /* <<< MUDOU AQUI (era #caption) */
-  margin: auto;
-  display: block;
-  width: 60%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+margin: auto;
+display: block;
+width: 60%;
+max-width: 700px;
+text-align: center;
+color: #ccc;
+padding: 10px 0;
+height: 150px;
 }
 
 /* Animação de Zoom (se aplica a ambos) */
 .modal-display-img, .modal-caption-text { /* <<< MUDOU AQUI */
-  animation-name: zoom;
-  animation-duration: 1s;
+animation-name: zoom;
+animation-duration: 1s;
 }
 
 @keyframes zoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
+from {transform: scale(0)}
+to {transform: scale(1)}
 }
 
 /* O BOTÃO DE FECHAR - Sua classe customizada continua */
 .custom-close {
-  position: absolute;
-  top: 70px;
-  right: 85px;
-  color: #ffffff;
-  font-size: 50px;
-  font-weight: bold;
-  transition: 0.3s;
-  z-index: 1001; /* Z-index maior que o fundo do modal */
+position: absolute;
+top: 70px;
+right: 85px;
+color: #ffffff;
+font-size: 50px;
+font-weight: bold;
+transition: 0.3s;
+z-index: 1001; /* Z-index maior que o fundo do modal */
 }
 
 .custom-close:hover,
 .custom-close:focus {
-  color: #ff0000;
-  text-decoration: none;
-  cursor: pointer;
+color: #ff0000;
+text-decoration: none;
+cursor: pointer;
 }
 
 /* Responsividade para telas menores */
 @media only screen and (max-width: 700px){
-  .modal-display-img { /* <<< MUDOU AQUI */
-    width: 100%;
-  }
-  .custom-close {
-      top: 15px;
-      right: 35px;
-  }
+.modal-display-img { /* <<< MUDOU AQUI */
+  width: 100%;
+}
+.custom-close {
+    top: 15px;
+    right: 35px;
+}
 }
