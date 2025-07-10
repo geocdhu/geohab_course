@@ -327,14 +327,15 @@ text-decoration: none;
 cursor: pointer;
 }
 
-/* Responsividade para telas menores */
-@media only screen and (max-width: 700px){
-.modal-display-img { /* <<< MUDOU AQUI */
-  width: 100%;
-  padding-top: inherit;
-}
-.custom-close {
-    top: 45px;
-    right: 35px;
-}
+/* Telas até 768px (tablets portrait) */
+@media only screen and (max-width: 768px) {
+  .modal-display-img {
+    width: 95%;
+    padding-top: inherit;
+    margin: 0 auto;
+  }
+  .custom-close {
+    top: 40px;
+    right: 30px;
+  }
 }
