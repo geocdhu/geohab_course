@@ -342,4 +342,31 @@ height: 11rem;
   }
 }
 
-/**/
+/* Loopa Zoom*/
+/* Reset básico e boa prática */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* O container que ancora a lupa */
+.img-magnifier-container {
+  position: relative;
+  display: inline-block; /* Garante que o container tenha o tamanho da imagem */
+}
+
+/* A lupa em si */
+.img-magnifier-glass {
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 0%; /* Torna a lupa redonda */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* Adiciona uma sombra para profundidade */
+  cursor: none; /* Esconde o cursor do mouse quando sobre a lupa */
+
+  /* Defina o tamanho da lupa aqui */
+  width: 200px;
+  height: 150px;
+}
