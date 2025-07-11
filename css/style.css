@@ -59,6 +59,7 @@ height: 11rem;
   padding: 10px;
   border-radius: 10px;
   font-weight: 700 !important;
+  margin-top: 1.5rem;
 
   strong {
     font-weight: 700 !important;
@@ -126,7 +127,8 @@ height: 11rem;
   padding: 0.25em 0.6em;
   font-size: 0.675rem;
   font-weight: 700 !important;
-    vertical-align: middle;
+  vertical-align: middle;
+  cursor: help;
 
   a {
     color: inherit;
