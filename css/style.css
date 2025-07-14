@@ -82,11 +82,16 @@ height: 11rem;
 }
 @include badge-color(#e91a1a, red);
 @include badge-color(#5d0067, purple);
+@include badge-color(#7d5d9f, purple2);
 @include badge-color(#000000, black);
-@include badge-color(#f9a825, yellow);
+@include badge-color(#fddd11, yellow);
 @include badge-color(#b8c1ca, gray);
 @include badge-color(#cc8f04, gold);
-@include badge-color(currentColor, auto);
+@include badge-color(#f5a924, ouro);
+@include badge-color(#84d0f0, azul-claro);
+@include badge-color(#009036, green);
+@include badge-color(currentColor, auto);  
+
 
 /* END - Badges*/
 
@@ -132,6 +137,7 @@ height: 11rem;
 
   a {
     color: inherit;
+    text-decoration: none !important; 
   }
 }
 
@@ -145,6 +151,27 @@ height: 11rem;
 .badge-text-gold{ color: #cc8f04; }
 .badge-text-black{ color: #000000; }
 
+/*Start - links dentro do Popover*/
+.popover-link-button {
+  display: block;        
+  width: 100%;          
+  background-color: #000000; 
+  color: #ffffff !important;   
+  border-radius: 3px;
+  padding: 0.5em 0.8em;    
+  font-size: 0.85rem;      
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none !important; 
+  margin-bottom: 5px;
+  transition: opacity 0.2s;
+}
+
+
+.popover-link-button:hover {
+  color: #ebebeb;
+  opacity: 0.8;
+}
 /*END*/
 
 /*Start - mensagem alerta icone padrao*/
@@ -372,3 +399,4 @@ body {
   width: 200px;
   height: 150px;
 }
+
