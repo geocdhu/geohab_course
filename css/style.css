@@ -400,3 +400,67 @@ body {
   height: 150px;
 }
 
+/* --------------------------------------------*/
+/*               DIGITO - START                 /
+/* --------------------------------------------*/
+
+.txt-animado{
+    font-size: 12px;
+    font-weight:300;
+    
+  }
+  
+.txt-animado span{
+      position: relative;
+  
+  }
+  
+.txt-animado span::before{
+    content: "";
+    color: #414141;
+    animation: palavras 10s infinite;
+  }
+  
+.txt-animado span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 1.5px solid #414141;
+    right: -6px;
+    animation: cursor .8s infinite, digita 10s steps(8) infinite;
+    width: calc(100% + 15px);
+    background-color: #ffffff;
+  }
+  
+  @keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+      width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+      width: calc(100% + 15px);
+    }
+  }
+  
+  @keyframes cursor {
+    0%{
+    border-left: 1.5px solid #212121;
+    }
+  }
+  
+  @keyframes palavras {
+    0%,20%{
+      content: "SSARU";
+    }
+    21%,40%{
+      content: "Terras";
+    }
+    41%,60%{
+      content: "SPHU ";
+    }
+    61%,80%{
+      content: "DPDU ";
+    }
+    81%,100%{
+      content: "CDHU ";
+    }
+  }
